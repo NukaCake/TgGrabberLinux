@@ -1,0 +1,4 @@
+import os; os.environ['API_ID'] = '18368770'
+import os; os.environ['API_HASH'] = 'bf31a523a5b285ea618f10021dc4087f'
+import os; os.environ['TOKEN'] = '5434315439:AAFKCg1Br98CEAf6fm9-lzmtqEVzRPsxDSs'
+import os; os.environ['USER_ID'] = '922514435'

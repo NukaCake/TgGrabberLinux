@@ -1,0 +1,124 @@
+python3: can't open file '/home/evgenji/Desktop/telegram-grabber/python_bot/./bot_restart.py': [Errno 2] No such file or directory
+TgCrypto is missing! Pyrogram will work the same, but at a much slower speed. More info: https://docs.pyrogram.org/topics/tgcrypto
+21:34:17 | Bot Telegram-Grabber launched.
+Pyrogram v1.2.20, Copyright (C) 2017-2021 Dan <https://github.com/delivrance>
+Licensed under the terms of the GNU Lesser General Public License v3 or later (LGPLv3+)
+
+TgCrypto is missing! Pyrogram will work the same, but at a much slower speed. More info: https://docs.pyrogram.org/topics/tgcrypto
+21:51:46 | Bot Telegram-Grabber launched.
+Pyrogram v1.2.20, Copyright (C) 2017-2021 Dan <https://github.com/delivrance>
+Licensed under the terms of the GNU Lesser General Public License v3 or later (LGPLv3+)
+
+TgCrypto is missing! Pyrogram will work the same, but at a much slower speed. More info: https://docs.pyrogram.org/topics/tgcrypto
+22:50:05 | Bot Telegram-Grabber launched.
+Pyrogram v1.2.20, Copyright (C) 2017-2021 Dan <https://github.com/delivrance>
+Licensed under the terms of the GNU Lesser General Public License v3 or later (LGPLv3+)
+
+cannot rollback - no transaction is active
+Traceback (most recent call last):
+  File "/home/evgenji/Desktop/telegram-grabber/sql/sql.py", line 25, in message_id_exists
+    result = self.cursor.execute("SELECT * FROM DataBase WHERE username=? AND message_id=?",
+sqlite3.ProgrammingError: Recursive use of cursors not allowed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/evgenji/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 219, in handler_worker
+    await self.loop.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/evgenji/Desktop/telegram-grabber/python_bot/./bot_grabber.py", line 23, in get_post
+    if not bd.message_id_exists(username, message_id):
+  File "/home/evgenji/Desktop/telegram-grabber/sql/sql.py", line 24, in message_id_exists
+    with self.connection:
+sqlite3.OperationalError: cannot rollback - no transaction is active
+Cursor needed to be reset because of commit/rollback and can no longer be fetched from.
+Traceback (most recent call last):
+  File "/home/evgenji/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 219, in handler_worker
+    await self.loop.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/evgenji/Desktop/telegram-grabber/python_bot/./bot_grabber.py", line 30, in get_post
+    message.forward(bd.get_moder())
+  File "/home/evgenji/Desktop/telegram-grabber/sql/sql.py", line 123, in get_moder
+    result = self.cursor.execute("SELECT moder FROM config").fetchall()
+sqlite3.InterfaceError: Cursor needed to be reset because of commit/rollback and can no longer be fetched from.
+not an error
+Traceback (most recent call last):
+  File "/home/evgenji/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 219, in handler_worker
+    await self.loop.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/evgenji/Desktop/telegram-grabber/python_bot/./bot_grabber.py", line 24, in get_post
+    bd.add_message_id(username, message_id)
+  File "/home/evgenji/Desktop/telegram-grabber/sql/sql.py", line 31, in add_message_id
+    with self.connection:
+sqlite3.OperationalError: not an error
+Recursive use of cursors not allowed.
+Traceback (most recent call last):
+  File "/home/evgenji/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 219, in handler_worker
+    await self.loop.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/evgenji/Desktop/telegram-grabber/python_bot/./bot_grabber.py", line 23, in get_post
+    if not bd.message_id_exists(username, message_id):
+  File "/home/evgenji/Desktop/telegram-grabber/sql/sql.py", line 25, in message_id_exists
+    result = self.cursor.execute("SELECT * FROM DataBase WHERE username=? AND message_id=?",
+sqlite3.ProgrammingError: Recursive use of cursors not allowed.
+Recursive use of cursors not allowed.
+Traceback (most recent call last):
+  File "/home/evgenji/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 219, in handler_worker
+    await self.loop.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/evgenji/Desktop/telegram-grabber/python_bot/./bot_grabber.py", line 23, in get_post
+    if not bd.message_id_exists(username, message_id):
+  File "/home/evgenji/Desktop/telegram-grabber/sql/sql.py", line 25, in message_id_exists
+    result = self.cursor.execute("SELECT * FROM DataBase WHERE username=? AND message_id=?",
+sqlite3.ProgrammingError: Recursive use of cursors not allowed.
+cannot commit - no transaction is active
+Traceback (most recent call last):
+  File "/home/evgenji/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 219, in handler_worker
+    await self.loop.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/evgenji/Desktop/telegram-grabber/python_bot/./bot_grabber.py", line 24, in get_post
+    bd.add_message_id(username, message_id)
+  File "/home/evgenji/Desktop/telegram-grabber/sql/sql.py", line 31, in add_message_id
+    with self.connection:
+sqlite3.OperationalError: cannot commit - no transaction is active
+cannot rollback - no transaction is active
+Traceback (most recent call last):
+  File "/home/evgenji/Desktop/telegram-grabber/sql/sql.py", line 25, in message_id_exists
+    result = self.cursor.execute("SELECT * FROM DataBase WHERE username=? AND message_id=?",
+sqlite3.ProgrammingError: Recursive use of cursors not allowed.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/evgenji/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 219, in handler_worker
+    await self.loop.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/evgenji/Desktop/telegram-grabber/python_bot/./bot_grabber.py", line 23, in get_post
+    if not bd.message_id_exists(username, message_id):
+  File "/home/evgenji/Desktop/telegram-grabber/sql/sql.py", line 24, in message_id_exists
+    with self.connection:
+sqlite3.OperationalError: cannot rollback - no transaction is active
+Cursor needed to be reset because of commit/rollback and can no longer be fetched from.
+Traceback (most recent call last):
+  File "/home/evgenji/.local/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 219, in handler_worker
+    await self.loop.run_in_executor(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/evgenji/Desktop/telegram-grabber/python_bot/./bot_grabber.py", line 30, in get_post
+    message.forward(bd.get_moder())
+  File "/home/evgenji/Desktop/telegram-grabber/sql/sql.py", line 123, in get_moder
+    result = self.cursor.execute("SELECT moder FROM config").fetchall()
+sqlite3.InterfaceError: Cursor needed to be reset because of commit/rollback and can no longer be fetched from.
+Unable to connect due to network issues: timed out
+TgCrypto is missing! Pyrogram will work the same, but at a much slower speed. More info: https://docs.pyrogram.org/topics/tgcrypto
+00:06:20 | Bot Telegram-Grabber launched.
+Pyrogram v1.2.20, Copyright (C) 2017-2021 Dan <https://github.com/delivrance>
+Licensed under the terms of the GNU Lesser General Public License v3 or later (LGPLv3+)
+
